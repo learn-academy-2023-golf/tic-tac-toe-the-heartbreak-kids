@@ -1,3 +1,14 @@
+h1 {
+  text-align: center;
+}
+
+.gameboard{
+  display: flex;
+  width: 320px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
 .square {
   border: 2px solid black;
   height: 100px;

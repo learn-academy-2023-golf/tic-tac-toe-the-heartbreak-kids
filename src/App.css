@@ -1,5 +1,13 @@
+html {
+  background-image: url("./assets/hbk.jpeg");
+  background-size: contain;
+  background-position: center;
+}
+
+
 h1 {
   text-align: center;
+  color: white;
 }
 
 .gameboard{
@@ -10,9 +18,10 @@ h1 {
 }
 
 .square {
-  border: 2px solid black;
+  border: 2px solid red;
   height: 100px;
   width: 100px;
   font-size: 75px;
   text-align: center;
+  background-color: black;
 }

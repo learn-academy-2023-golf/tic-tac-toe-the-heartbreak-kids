@@ -83,6 +83,9 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
     Branch: disabled-play
     
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
+
+    Branch: game-ended
+    
 - As a user, I can click on a restart button that will clear the game board.
 
 ### 🏔 Stretch Goals
@@ -107,3 +110,12 @@ Each team will give a brief (three minute) presentation of their application. Pr
 - First team member: What was the biggest learning moment for your team?
 - Second team member: What was the most challenging thing about this project?
 - Third team member (if applicable): How did you manage the workflow in a group of three?
+
+
+Pseudo Code - 
+-set up a 3x3 board 
+-created functions to place the markers
+-set up a variable to track the turns
+-set up function to evaluate the winning condition
+-set up a variable that would disable the gameplay once a win condition is met
+-all stories working as intended with one exception , the function that evaluates winning conditions work but doesnt trigger when need be. 

@@ -9,6 +9,7 @@ const App = () => {
   const [turnTracker, setTurnTracker] = useState(1)
   
   const [disablePlay, setDisablePlay] = useState(false)
+
  
   const calculateWinner = (squares) => {
     const winPatterns = [
@@ -20,23 +21,26 @@ const App = () => {
     for (let i=0; i<winPatterns.length; i++) {
       const [a, b, c] = winPatterns[i]
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-        alert(`${squares[a]} won the game!`)
+        alert(`${squares[a]} HBK won the game!`)
         setDisablePlay(true)
       }
     }
   }
+
+
+
 
   const handleGameplay = (index) => {
 
     let updatedSquares = [...squares]
 
     if (squares[index] === null && turnTracker%2 === 1) {
-      updatedSquares[index] = "❌"
+      updatedSquares[index] = "❤️‍🔥"
       setSquares(updatedSquares)
       setTurnTracker(turnTracker + 1)
       calculateWinner(squares)
     } else if (squares[index] === null && turnTracker%2 === 0) {
-      updatedSquares[index] = "⭕️"
+      updatedSquares[index] = "❤️‍🩹"
       setSquares(updatedSquares)
       setTurnTracker(turnTracker + 1)
       calculateWinner(squares)
@@ -46,7 +50,7 @@ const App = () => {
 
   return (
     <>
-      <h1>Tic Tac Toe</h1>
+      <h1>HBK Tic Tac Toe</h1>
       <div className="gameboard">
       {squares.map((value, index) => {
         return (

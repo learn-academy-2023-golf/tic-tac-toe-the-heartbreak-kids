@@ -4,11 +4,12 @@ const Square = (props) => {
 
   const handleClick = () => {
     props.handleGameplay(props.index)
+    props.calculateWinner(props.squares)
   }
 
   return (
     <div className="square" onClick={handleClick}>
-      {props.value}
+    {props.value} 
     </div>
   )
 }

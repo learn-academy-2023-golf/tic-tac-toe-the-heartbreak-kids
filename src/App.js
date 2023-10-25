@@ -5,13 +5,20 @@ import './App.css'
 const App = () => {
   const [squares, setSquares] = useState(Array(9).fill(null))
 
+  const [turnTracker, setTurnTracker] = useState(1)
+
 const handleGameplay = (index) => {
 
   let updatedSquares = [...squares]
 
-  if (squares[index] === null) {
+  if (squares[index] === null && turnTracker%2 === 1) {
     updatedSquares[index] = "❌"
     setSquares(updatedSquares)
+    setTurnTracker(turnTracker + 1)
+  } else if (squares[index] === null && turnTracker%2 === 0) {
+    updatedSquares[index] = "⭕️"
+    setSquares(updatedSquares)
+    setTurnTracker(turnTracker + 1)
   }
 }
 

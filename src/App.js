@@ -7,7 +7,9 @@ const App = () => {
 
   // Created variable to keep track of whose turn it is
   const [turnTracker, setTurnTracker] = useState(1)
-
+  
+  const [disablePlay, setDisablePlay] = useState(false)
+ 
   const calculateWinner = (squares) => {
     const winPatterns = [
       [0, 1, 2], [3, 4, 5], [6, 7, 8],  // Rows
@@ -19,6 +21,7 @@ const App = () => {
       const [a, b, c] = winPatterns[i]
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
         alert(`${squares[a]} won the game!`)
+        setDisablePlay(true)
       }
     }
   }
@@ -51,7 +54,8 @@ const App = () => {
         value={value}
         key={index}
         index={index}
-        handleGameplay={handleGameplay} />
+        handleGameplay={handleGameplay}
+        disablePlay={disablePlay} />
         )
       })}
       </div>

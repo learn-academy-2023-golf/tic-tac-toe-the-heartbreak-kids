@@ -79,6 +79,9 @@ There is an interesting approach to the [Tic Tac Toe win condition in React](htt
     Branch: win-condition
 
 - As a user, I can't play the game after the game has been won.
+
+    Branch: disabled-play
+    
 - As a user, if no more squares are available, I can see a notice telling me that the game has ended.
 - As a user, I can click on a restart button that will clear the game board.
 

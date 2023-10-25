@@ -3,8 +3,9 @@ import React from 'react'
 const Square = (props) => {
 
   const handleClick = () => {
-    props.handleGameplay(props.index)
-    props.calculateWinner(props.squares)
+    if(props.disablePlay === false) {
+      props.handleGameplay(props.index)
+    }
   }
 
   return (
